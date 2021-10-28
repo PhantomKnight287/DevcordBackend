@@ -5,7 +5,7 @@ const cors = require("cors");
 mongoose.connect(`${process.env.mongodbUrl}`);
 const connection = mongoose.connection;
 connection.on("open", () => {
-    console.log("Connected To Db");
+  console.log("Connected To Db");
 });
 const app = express();
 app.use(express.json());
@@ -14,8 +14,7 @@ app.get("/", async (req, res) => {
   res.status(200).send({ message: "Hello World" });
 });
 
-app.get("/login", async (req, res) => {});
-app.post('/',require('./Routes/Login'))
+app.use("/signup", require("./Routes/SignUp"));
 app.listen(4000, () => {
   console.log("Server Started at Port 4000");
 });

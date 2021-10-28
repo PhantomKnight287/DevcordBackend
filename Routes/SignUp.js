@@ -18,7 +18,6 @@ Router.post("/", async (req, res) => {
         res.status(500).send({ error: `${err.message}` });
         return;
       });
-    console.log(psd);
     try {
       const user = new userModel({
         username: req.body.username,
