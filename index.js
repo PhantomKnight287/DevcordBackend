@@ -15,6 +15,7 @@ app.get("/", async (req, res) => {
 });
 
 app.use("/signup", require("./Routes/SignUp"));
+app.use("/login", require("./Routes/Login"));
 app.listen(4000, () => {
   console.log("Server Started at Port 4000");
 });
