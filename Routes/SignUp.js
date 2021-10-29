@@ -25,7 +25,13 @@ Router.post("/", async (req, res) => {
         email: req.body.email,
       });
       const response = await user.save();
-      res.status(200).send(response);
+      const responseObject = {
+        username: response.username,
+        email: response.email,
+        imageUrl: response.imageUrl,
+        _id:response._id
+      };
+      res.status(200).send(responseObject);
     } catch (error) {
       res.status(500).send({ error: `${error.message}` });
     }
