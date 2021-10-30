@@ -29,7 +29,8 @@ Router.post("/", async (req, res) => {
         username: response.username,
         email: response.email,
         imageUrl: response.imageUrl,
-        _id:response._id
+        _id: response._id,
+        servers: response.serversJoined,
       };
       res.status(200).send(responseObject);
     } catch (error) {

@@ -17,6 +17,11 @@ const schema = new mongoose.Schema({
     required: false,
     default: "",
   },
+  serversJoined:{
+    type:Array,
+    required:false,
+    default:[],
+  }
 });
 const model = mongoose.models.users || mongoose.model("users", schema);
 module.exports = model
