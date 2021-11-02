@@ -4,7 +4,7 @@ const newserverSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  serverIcon: {
+  photoUrl: {
     type: String,
     required: false,
     default: "",
@@ -16,10 +16,6 @@ const newserverSchema = new mongoose.Schema({
   },
   serverAdmin: {
     type: Object,
-    required: true,
-  },
-  serverAdminId: {
-    type: String,
     required: true,
   },
 });
