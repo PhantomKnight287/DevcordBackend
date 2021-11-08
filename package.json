@@ -4,7 +4,10 @@
   "description": "Backend For DevCord Frontend",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "build:dev":"tsc -p tsconfig.json --watch",
+    "build:prod":"tsc -p tsconfig.json",
+    "start:dev":"nodemon ./build/index.js",
+    "start:prod":"node ./build/index.js"
   },
   "repository": {
     "type": "git",
